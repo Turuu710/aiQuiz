@@ -1,5 +1,5 @@
 import prisma from "@/lib/prisma";
-import { verifyWebhook } from "@clerk/nextjs/webhooks";
+
 import { NextRequest, NextResponse } from "next/server";
 import { Webhook } from "svix";
 type Event = {
@@ -40,8 +40,8 @@ export async function POST(req: NextRequest) {
     await prisma.user.create({
       data: {
         email: email_addresses[0].email_address,
-        name: `${first_name}${last_name}`,
-        clerkId: id,
+        // name: `${first_name}${last_name}`,
+        // clerkId: id,
       },
     });
     return NextResponse.json({ message: "Success" }, { status: 201 });
