@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
         clerkId: id,
       },
     });
-    return NextResponse.json({ message: "Success" }, { status: 200 });
+    return NextResponse.json({ message: "Success" }, { status: 201 });
   } catch (error) {
     return NextResponse.json({ error: "Invalid signature" }, { status: 500 });
   }

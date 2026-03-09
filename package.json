@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "prisma-push": "npx prisma generate",
+    "prisma-generate": "npx prisma generate"
   },
   "dependencies": {
     "@clerk/nextjs": "^7.0.1",
